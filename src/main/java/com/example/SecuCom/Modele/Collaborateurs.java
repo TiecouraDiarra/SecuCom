@@ -9,7 +9,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "collaborateurs", uniqueConstraints = {
-        //@UniqueConstraint(columnNames = {"username"}),
+        @UniqueConstraint(columnNames = {"nomutilisateur"}),
         @UniqueConstraint(columnNames = {"email"})
 })
 public class Collaborateurs {
@@ -18,6 +18,7 @@ public class Collaborateurs {
     private long id;
     private String nom;
     private String prenom;
+    private String nomutilisateur;
     private String email;
     private String password;
 
